@@ -51,7 +51,7 @@ def togpx(track, fo):
         dt = datetime.fromtimestamp(tp['time_gps_epoch'])
         writeln(fo, '<trkpt lat="{}" lon="{}">'.format(lat, lon), 3)
         writeln(fo, '<ele>{}</ele>'.format(ele), 4)
-        qwriteln(fo, '<time>{}</time>'.format(dt.strftime('%Y-%m-%dT%H:%M:%S.%fZ')), 4)
+        writeln(fo, '<time>{}</time>'.format(dt.strftime('%Y-%m-%dT%H:%M:%S.%fZ')), 4)
         writeln(fo, '</trkpt>', 3)
     writeln(fo, '</trkseg>', 2)
     writeln(fo, '</trk>', 1)
